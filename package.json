@@ -1,0 +1,87 @@
+{
+  "name": "easy-magnify-waft",
+  "version": "2.0.2",
+  "description": "Everything you need for magnifying images",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChetSocio/easy-magnify.git"
+  },
+  "keywords": [
+    "image-zoom",
+    "image",
+    "react",
+    "photo",
+    "lens",
+    "ecommerce",
+    "magnify",
+    "magnifier"
+  ],
+  "author": "Chet Raj Gautam <dommeyss@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "~0.14.9 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "clamp": "1.0.1",
+    "detect-it": "4.0.1",
+    "fast-deep-equal": "3.1.3",
+    "object-assign": "4.1.1",
+    "prop-types": "15.8.1",
+    "react-cursor-position": "3.0.3",
+    "react-required-if": "1.0.3"
+  },
+  "main": "dist/ReactImageMagnify.js",
+  "module": "dist/es/ReactImageMagnify.js",
+  "files": [
+    "dist",
+    "LICENCE"
+  ],
+  "scripts": {
+    "analyze": "npm run stats && webpack-bundle-analyzer stats.json",
+    "build-umd": "webpack -p",
+    "build-cjs": "cross-env BABEL_ENV=cjs babel src --out-dir dist",
+    "build-es": "babel src --out-dir dist/es",
+    "build": "rimraf dist && npm run build-cjs && npm run build-es && npm run build-umd",
+    "build-watch": "cross-env BABEL_ENV=cjs babel --watch src --out-dir dist",
+    "prepublishOnly": "npm run build",
+    "stats": "webpack -p --profile --json > stats.json",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false,
+    "exclude": [
+      "test"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "4.1.2",
+    "coveralls": "3.0.0",
+    "cross-env": "^5.0.5",
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "eslint": "^4.8.0",
+    "eslint-plugin-chai-friendly": "^0.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jsdom": "^12.0.0",
+    "mocha": "4.0.0",
+    "nyc": "^11.2.1",
+    "react-test-renderer": "^16.5.0",
+    "rimraf": "^2.6.2",
+    "sinon": "4.1.2",
+    "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^2.9.0"
+  }
+}
