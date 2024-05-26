@@ -1,6 +1,6 @@
-<h1>React Image Magnifier</h1>
+<h1>React Image Magnifier Waft</h1>
 
-<p> <code>React Image Magnifier </code> is an <strong> open-source image-zooming npm package </strong>. You may have seen really nice image zooming on ecommerce sites like amazon , flipkart and more. If you want same functionality on your site then you can use this </p>
+<p> <code>React Image Magnifier Waft</code> is an <strong> open-source image-zooming npm package </strong>. You may have seen really nice image zooming on ecommerce sites like amazon , flipkart and more. If you want same functionality on your site then you can use this </p>
 <p>This package is forked from <a href='https://www.npmjs.com/package/react-image-magnify'>react-image-magnify</a> and maintained. The code has been changed from class-based components to functional-based components compatible with React v18 with removal of defaultProps which has been depreceated.</p>
 
 A responsive React image zoom component for touch and mouse.

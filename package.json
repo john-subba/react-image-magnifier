@@ -1,5 +1,5 @@
 {
-  "name": "react-image-magnifier",
+  "name": "react-image-magnifier-waft",
   "version": "1.0.0",
   "description": "Everything you need for magnifying your images",
   "repository": {
@@ -19,7 +19,7 @@
   "author": "Waft Technology",
   "license": "MIT",
   "peerDependencies": {
-    "react": "~0.14.9 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
     "clamp": "1.0.1",
