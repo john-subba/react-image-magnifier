@@ -1,10 +1,10 @@
 {
-  "name": "easy-magnify-waft",
+  "name": "react-image-magnifier",
   "version": "2.0.2",
-  "description": "Everything you need for magnifying images",
+  "description": "Everything you need for magnifying your images",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChetSocio/easy-magnify.git"
+    "url": "https://github.com/john-subba/react-image-magnifier"
   },
   "keywords": [
     "image-zoom",
@@ -16,7 +16,7 @@
     "magnify",
     "magnifier"
   ],
-  "author": "Chet Raj Gautam <dommeyss@gmail.com>",
+  "author": "Waft Technology",
   "license": "MIT",
   "peerDependencies": {
     "react": "~0.14.9 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"

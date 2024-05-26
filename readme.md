@@ -1,6 +1,6 @@
-<h1>Easy Magnify Waft</h1>
+<h1>React Image Magnifier</h1>
 
-<p> <code>Easy-magnify-waft </code> is an <strong> open-source image-zooming npm package </strong>. You may have seen really nice image zooming on ecommerce sites like amazon , flipkart and more. If you want same functionality on your site then you can use this </p>
+<p> <code>React Image Magnifier </code> is an <strong> open-source image-zooming npm package </strong>. You may have seen really nice image zooming on ecommerce sites like amazon , flipkart and more. If you want same functionality on your site then you can use this </p>
 <p>This package is forked from <a href='https://www.npmjs.com/package/react-image-magnify'>react-image-magnify</a> and maintained. The code has been changed from class-based components to functional-based components compatible with React v18 with removal of defaultProps which has been depreceated.</p>
 
 A responsive React image zoom component for touch and mouse.
@@ -189,7 +189,7 @@ For more information on responsive images, please try these resources:
 
 ## Support
 
-Please [open an issue](https://github.com/ChetSocio/easy-magnify/issues).
+Please [open an issue](https://github.com/john-subba/react-image-magnifier/issues).
 
 <p>The inspiration is taken from other package that has not been updated since last 3-4 years and many people seem to use it till now even after it conflicts with React 17 & 18.
 If you like this package then make sure to give it some stars.</p>
@@ -197,4 +197,4 @@ If you like this package then make sure to give it some stars.</p>
 ## Contributing
 
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch,
-add commits, and [open a pull request](https://github.com/ChetSocio/easy-magnify/compare/).
+add commits, and [open a pull request](https://github.com/john-subba/react-image-magnifier/compare/).
