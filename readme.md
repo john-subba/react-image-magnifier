@@ -104,6 +104,87 @@ import ReactImageMagnify from 'easy-magnify-waft';
 
 ```
 
+Usage with external carousel library such as <a href='https://www.npmjs.com/package/react-responsive-carousel'>react-responsive-carousel</a> is very simple. In this case if you want your portal element outside of the your react magnify component scope you can target and change the style of the portal element using plain JS just targetting the element and changing it's opacity and scale value.
+
+```JavaScript
+import ReactImageMagnify from 'easy-magnify-waft';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+  const handleMouseEnter = () => {
+    const elem = document.getElementById("ProductMagnify"); // Your preferred portal id
+    if (elem) {
+      elem.style.opacity = 1;
+      elem.style.transform = `scale(1.25)`;
+      elem.style.left = "50%";
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const elem = document.getElementById("ProductMagnify"); // Your preferred portal id
+    if (elem) {
+      elem.style.opacity = 0;
+      elem.style.transform = `scale(0)`;
+    }
+  };
+
+    // ** Note you can achieve this using css also. But in this approach my portal div is outside of the magnify scope, I am using js to target the elem and change it's style.
+...
+    <div
+        className="w-1/3"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Carousel
+          showIndicators={false}
+          renderThumbs={() =>
+            images.map((each) => (
+              <Fragment key={each.thumbnail}>
+                <img
+                  src={each.thumbnail}
+                  alt={each.thumbnail}
+                  className="w-[80px] h-[78px] object-contain"
+                />
+              </Fragment>
+            ))
+          }
+        >
+          {images.map((each) => (
+            <Fragment key={each.original}>
+              <ReactImageMagnify
+                className="magnifyimg"
+                {...{
+                  smallImage: {
+                    alt: "Testing",
+                    imageClassName: "magnifyimgA w-full h-full object-contain",
+                    src: each.original,
+                    isFluidWidth: true,
+                  },
+                  largeImage: {
+                    alt: "Testing",
+                    src: each.original,
+                    width: 1024,
+                    height: 1024,
+                  },
+                  enlargedImageStyle: {
+                    objectFit: "contain",
+                  },
+                  enlargedImagePortalId: "ProductMagnify",
+                  enlargedImageContainerClassName: "enlargeImage",
+                  shouldUsePositiveSpaceLens: false,
+                }}
+              />
+            </Fragment>
+          ))}
+        </Carousel>
+      </div>
+      <div className="w-2/3 relative">
+        <div id="ProductMagnify" />
+        <div className="text-2xl font-bold">Another Div (outside of component scope)</div>
+    </div>
+...
+```
+
 ## Required Props
 
 | Prop       | Type   | Default | Description                                                     |

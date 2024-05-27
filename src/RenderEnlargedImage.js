@@ -13,14 +13,6 @@ const RenderEnlargedImage = ({
   const [isMounted, setIsMounted] = useState(false);
   const [portalElement, setPortalElement] = useState(null);
 
-  useEffect(() => {
-    setIsMounted(true);
-
-    if (isPortalRendered) {
-      setPortalElement(document.getElementById(portalId));
-    }
-  }, [portalId, isPortalRendered]);
-
   const isPortalIdImplemented = useMemo(() => !!portalId, [portalId]);
 
   const isPortalRendered = useMemo(() => {
@@ -34,6 +26,24 @@ const RenderEnlargedImage = ({
 
     return isPortalEnabledForTouch;
   }, [isPortalIdImplemented, isTouchDetected, isPortalEnabledForTouch]);
+
+  useEffect(() => {
+    setIsMounted(true);
+
+    if (isPortalRendered) {
+      const portal = document.getElementById(portalId);
+      setPortalElement(portal);
+      if (portal) {
+        portal.style.position = "absolute";
+        portal.style.left = "1%";
+        portal.style.top = "0px";
+        portal.style.zIndex = "9";
+        portal.style.transform = "scale(0)";
+        portal.style.opacity = 0;
+        portal.style.transition = "all 0.2s ease-in-out";
+      }
+    }
+  }, [portalId, isPortalRendered]);
 
   const compositProps = useMemo(
     () => objectAssign({}, props, { isPortalRendered }),
